@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+      link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css")    
+      style .hero.is-primary {background: #e4924d;}
+body
+  .hero.is-primary.is-medium
+    .hero-body
+      .container
+        h1.title Stackerbot
+        h3.subtitle A stackoverflow search bot for github
+  section.section
+    .container
+      .content.has-text-centered
+        h3.title How does it work?
+        hr
+        img(src="example.png")
+        p Whenever a user opens an issue on a configured repository. Stackerbot will use the title entered to find relevant questions on stackoverflow and make a comment on the issue with the list of questions it's found.

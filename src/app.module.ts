@@ -8,6 +8,7 @@ import Github from './config/github';
 import { StackoverflowService } from './stackoverflow.service';
 import StackExchange from './config/stackexchange';
 import * as stackexchange from 'stackexchange';
+import { IndexController } from './index.controller';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import * as stackexchange from 'stackexchange';
       path.resolve(__dirname, 'config', '**/!(*.d).{ts,js}'),
     ),
   ],
-  controllers: [WebhookController],
+  controllers: [WebhookController, IndexController],
   providers: [
     {
       provide: 'OctoClient',
